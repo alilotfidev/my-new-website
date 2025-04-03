@@ -2,7 +2,7 @@ import WorkList from "./WorkList";
 
 export default function WorkSection() {
   return (
-    <section className="work-section bg-white text-black p-4 sm:p-8 md:p-12 lg:p-16">
+    <section className="work-section bg-black text-white p-4 sm:p-8 md:p-12 lg:p-16">
       <div className="text min-h-[40vh] mt-20">
         <p className="text-xl sm:text-2xl font-light max-w-3xl mx-auto">
           A creative front-end developer with a passion for digital product

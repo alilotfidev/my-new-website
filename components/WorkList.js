@@ -3,6 +3,57 @@ import WorkItem from "./WorkItem";
 import { useState, useEffect } from "react";
 import { gsap } from "gsap";
 
+const worksData = [
+  {
+    id: "1",
+    name: "Illustrator Portfolio",
+    technologies: ["Next.js", "TailwindCSS", "Netlify"],
+    link: "https://fatememohiti-qoolche.netlify.app/",
+    image: "qoolche.png",
+    scrolling: true,
+  },
+  {
+    id: "2",
+    name: "Portfolio Website",
+    technologies: ["Next.js", "Tailwind CSS"],
+    link: "https://personal-website-template-nu.vercel.app/",
+    image: "portfolio.png",
+    scrolling: true,
+  },
+  {
+    id: "3",
+    name: "E-coomerce Website",
+    technologies: ["Next.js", "Stripe", "Contentful"],
+    link: "https://online-shop-two-murex.vercel.app/",
+    github: "https://github.com/alilotfidev/online-shop",
+    image: "kanken.png",
+    scrolling: false,
+  },
+  {
+    id: "4",
+    name: "CSS Drawings",
+    technologies: ["HTML", "CSS"],
+    link: "https://codepen.io/alilotfidev",
+    image: [
+      {
+        src: "/images/work/codepen-5.png", // Replace with your actual image paths
+      },
+      {
+        src: "/images/work/codepen-2.png",
+      },
+      {
+        src: "/images/work/codepen-3.png",
+      },
+      {
+        src: "/images/work/codepen-4.png",
+      },
+      {
+        src: "/images/work/codepen-1.png",
+      },
+    ],
+  },
+];
+
 export default function WorkList() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -44,12 +95,10 @@ export default function WorkList() {
         <span id="work-number">{activeIndex + 1}</span>
         <span>.</span>
       </div>
-      <div className="flex flex-col gap-6 md:max-w-1/2">
-        <WorkItem id={1} />
-        <WorkItem id={2} />
-        <WorkItem id={3} />
-        <WorkItem id={4} />
-        <WorkItem id={5} />
+      <div className="flex flex-col gap-32 md:max-w-1/2">
+        {worksData.map((work, index) => (
+          <WorkItem key={index} work={work} />
+        ))}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function WorkExperience() {
   return (
-    <div className="work-experience bg-black text-white p-4 sm:p-6 md:p-8 lg:p-10 mt-20">
+    <div className="work-experience bg-white p-4 sm:p-6 md:p-8 lg:p-10 mt-20">
       <h2 className="text-8xl font-bold">Where have I worked?</h2>
       <div className="mt-12 flex flex-col gap-12">
         <div className="experience">

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const altform = localFont({
   src: [
@@ -52,10 +53,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${altform.className} bg-black overflow-x-hidden`}>
+      <body className={`${altform.className} bg-white overflow-x-hidden`}>
         <Navbar />
         {children}
         <Footer />
+        <LoadingScreen />
       </body>
     </html>
   );
