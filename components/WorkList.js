@@ -38,13 +38,13 @@ export default function WorkList() {
   }, [activeIndex]);
 
   return (
-    <div className="flex justify-between mt-16">
-      <div className="text-[16rem] leading-[0.8] sticky top-8 h-fit">
+    <div className="md:flex justify-between mt-6 sm:mt-8 md:mt-12 lg:mt-16">
+      <div className="md:text-9xl lg:text-[16rem] leading-[0.8] sticky top-8 h-fit hidden md:block">
         <span>0</span>
         <span id="work-number">{activeIndex + 1}</span>
         <span>.</span>
       </div>
-      <div className="flex flex-col gap-6 max-w-1/2">
+      <div className="flex flex-col gap-6 md:max-w-1/2">
         <WorkItem id={1} />
         <WorkItem id={2} />
         <WorkItem id={3} />
