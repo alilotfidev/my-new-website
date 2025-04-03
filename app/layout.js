@@ -1,8 +1,47 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import localFont from "next/font/local";
 
-const inter = Inter({
-  subsets: ["latin"],
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const altform = localFont({
+  src: [
+    {
+      path: "../public/fonts/altform-extrathin.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/altform-thin.otf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/altform-light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/altform-regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/altform-semibold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/altform-bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/altform-black.otf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata = {
@@ -13,7 +52,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={`${altform.className} bg-black overflow-x-hidden`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
