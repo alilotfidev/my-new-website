@@ -2,6 +2,7 @@
 import WorkItem from "./WorkItem";
 import { useState, useEffect } from "react";
 import { gsap } from "gsap";
+import TextReveal from "./animation/TextReveal";
 
 const worksData = [
   {

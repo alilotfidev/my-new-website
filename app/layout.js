@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
+import LenisProvider from "@/components/animation/LenisProvider";
 
 const altform = localFont({
   src: [
@@ -54,10 +55,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${altform.className} bg-white overflow-x-hidden`}>
-        <Navbar />
-        {children}
-        <Footer />
-        <LoadingScreen />
+        <LenisProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <LoadingScreen />
+        </LenisProvider>
       </body>
     </html>
   );
