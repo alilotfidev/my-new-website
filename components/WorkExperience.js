@@ -3,7 +3,7 @@ import TextReveal from "./animation/TextReveal";
 
 export default function WorkExperience() {
   return (
-    <div className="work-experience bg-white p-4 sm:p-6 md:p-8 lg:p-10 mt-20">
+    <div className="work-experience bg-white p-4 sm:p-6 md:p-8 lg:p-10 mt-20 relative ">
       <h2 className="text-8xl font-bold">
         <TextReveal triggerOnScroll={true}>Where have I worked?</TextReveal>
       </h2>

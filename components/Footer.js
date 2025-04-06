@@ -1,10 +1,11 @@
+"use client";
 import Link from "next/link";
 import TextReveal from "./animation/TextReveal";
 
 export default function Footer() {
   return (
     <div
-      className="bg-black text-white mt-20 p-4 sm:p-6 md:p-8 lg:p-10 min-h-96 flex flex-col justify-between"
+      className="bg-black text-white mt-20 p-4 sm:p-6 md:p-8 lg:p-10 min-h-96 flex flex-col justify-between z-20 relative"
       id="contact"
     >
       <div className="flex justify-between lg:items-center flex-col lg:flex-row gap-6 lg:gap-0">

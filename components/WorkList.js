@@ -10,7 +10,7 @@ const worksData = [
     name: "Illustrator Portfolio",
     technologies: ["Next.js", "TailwindCSS", "Netlify"],
     link: "https://fatememohiti-qoolche.netlify.app/",
-    image: "qoolche.png",
+    image: "qoolche.jpg",
     scrolling: true,
   },
   {
@@ -18,7 +18,7 @@ const worksData = [
     name: "Portfolio Website",
     technologies: ["Next.js", "Tailwind CSS"],
     link: "https://personal-website-template-nu.vercel.app/",
-    image: "portfolio.png",
+    image: "portfolio.jpg",
     scrolling: true,
   },
   {
@@ -27,7 +27,7 @@ const worksData = [
     technologies: ["Next.js", "Stripe", "Contentful"],
     link: "https://online-shop-two-murex.vercel.app/",
     github: "https://github.com/alilotfidev/online-shop",
-    image: "kanken.png",
+    image: "kanken.jpg",
     scrolling: false,
   },
   {

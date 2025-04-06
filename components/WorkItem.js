@@ -5,6 +5,9 @@ import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import WorkItemSlider from "@/components/WorkItemSlider";
 import TextReveal from "./animation/TextReveal";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function WorkItem({ work }) {
   const { scrolling, name, technologies, link, image, github } = work;
@@ -17,7 +20,7 @@ export default function WorkItem({ work }) {
     let container;
     if (scrolling) {
       const handleMouseEnter = () => {
-        gsap.to(img, { y: "-50%", duration: 2, ease: "power2.out" }); // Moves image up
+        gsap.to(img, { y: "-55%", duration: 2, ease: "power2.out" }); // Moves image up
       };
 
       const handleMouseLeave = () => {
@@ -81,6 +84,31 @@ export default function WorkItem({ work }) {
     };
   }, []);
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      const elements = gsap.utils.toArray("[data-speed]");
+
+      elements.forEach((el) => {
+        const speed = parseFloat(el.getAttribute("data-speed") || "0");
+
+        gsap.to(el, {
+          y: () => -(speed * 100), // or more depending on depth
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="work-item">
       {typeof image === "string" ? (
@@ -88,10 +116,14 @@ export default function WorkItem({ work }) {
           <div
             ref={containerRef}
             className={`relative w-[500px] ${
-              name === "E-coomerce Website" ? "h-[300px]" : "h-[800px]"
+              name === "E-coomerce Website" ? "h-[300px]" : "h-[500px]"
             } overflow-hidden`}
           >
-            <div ref={imageRef} className="absolute top-0 left-0 w-full">
+            <div
+              ref={imageRef}
+              className="absolute top-0 left-0 w-full"
+              data-speed="0.6"
+            >
               <Image
                 src={`/images/work/${image}`}
                 alt="Scrolling Image"
