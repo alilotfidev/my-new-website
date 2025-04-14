@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import WorkItemSlider from "@/components/WorkItemSlider";
 import TextReveal from "./animation/TextReveal";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,11 +14,14 @@ export default function WorkItem({ work }) {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
   const techListRef = useRef(null);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
+    setIsLargeScreen(window.innerWidth > 1024);
     const img = imageRef.current;
     let container;
-    if (scrolling) {
+
+    if (scrolling && isLargeScreen) {
       const handleMouseEnter = () => {
         gsap.to(img, { y: "-55%", duration: 2, ease: "power2.out" }); // Moves image up
       };
@@ -115,14 +118,14 @@ export default function WorkItem({ work }) {
         <div>
           <div
             ref={containerRef}
-            className={`relative w-[500px] ${
+            className={`relative lg:w-[500px] ${
               name === "E-coomerce Website" ? "h-[300px]" : "h-[500px]"
             } overflow-hidden`}
           >
             <div
               ref={imageRef}
               className="absolute top-0 left-0 w-full"
-              data-speed="0.6"
+              data-speed={isLargeScreen ? "0.6" : ""}
             >
               <Image
                 src={`/images/work/${image}`}

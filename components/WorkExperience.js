@@ -4,7 +4,7 @@ import TextReveal from "./animation/TextReveal";
 export default function WorkExperience() {
   return (
     <div className="work-experience bg-white p-4 sm:p-6 md:p-8 lg:p-10 mt-20 relative ">
-      <h2 className="text-8xl font-bold">
+      <h2 className="sm:text-6xl text-8xl font-bold">
         <TextReveal triggerOnScroll={true}>Where have I worked?</TextReveal>
       </h2>
       <div className="mt-12 flex flex-col gap-12">
@@ -27,7 +27,7 @@ export default function WorkExperience() {
                 </TextReveal>
               </p>
             </div>
-            <ul className="flex flex-col justify-between opacity-60 col-span-6 md:col-span-1">
+            <ul className="flex flex-col justify-between opacity-60 col-span-6 md:col-span-2">
               <li>
                 <TextReveal
                   triggerOnScroll={true}

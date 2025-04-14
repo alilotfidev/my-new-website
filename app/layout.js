@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Footer />
-          {/* <LoadingScreen /> */}
+          <LoadingScreen />
         </LenisProvider>
       </body>
     </html>
