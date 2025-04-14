@@ -27,7 +27,7 @@ export default function WorkExperience() {
                 </TextReveal>
               </p>
             </div>
-            <ul className="flex flex-col justify-between opacity-60 col-span-6 md:col-span-2">
+            <ul className="flex flex-col justify-between opacity-60 col-span-6 md:col-span-1">
               <li>
                 <TextReveal
                   triggerOnScroll={true}
