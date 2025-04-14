@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import WorkItemSlider from "@/components/WorkItemSlider";
 import TextReveal from "./animation/TextReveal";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+// registering gsap scroll
 gsap.registerPlugin(ScrollTrigger);
 
 export default function WorkItem({ work }) {
