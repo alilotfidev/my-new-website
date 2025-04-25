@@ -32,6 +32,15 @@ const worksData = [
   },
   {
     id: "4",
+    name: "Real Estate Website",
+    technologies: ["Next.js", "TailwindCss", "GSAP"],
+    link: "https://real-estate-phi-ruby-88.vercel.app/",
+    github: "https://github.com/alilotfidev/real-estate",
+    image: "real-estate.jpg",
+    scrolling: false,
+  },
+  {
+    id: "5",
     name: "CSS Drawings",
     technologies: ["HTML", "CSS"],
     link: "https://codepen.io/alilotfidev",
