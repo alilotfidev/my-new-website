@@ -12,8 +12,8 @@ export default function WorkItem({ work }) {
         width={600}
         height={600}
       />
-      <div className="description mt-4">
-        <h3 className="max-w-2/3 text-2xl font-semibold">{name}</h3>
+      <div className="description mt-3 sm:mt-4">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">{name}</h3>
         <Link href={link} className="text-sm underline">
           View Project
         </Link>

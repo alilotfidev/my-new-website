@@ -23,7 +23,7 @@ const worksData = [
 
 export default function WorkList() {
   return (
-    <div className="grid grid-cols-2 gap-8 mt-28">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-16 md:mt-28">
       {worksData.map((work, index) => (
         <WorkItem key={index} work={work} />
       ))}
