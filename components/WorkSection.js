@@ -19,12 +19,6 @@ export default function WorkSection() {
           <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold">
             <TextReveal triggerOnScroll={true}>Selected Works /</TextReveal>
           </h2>
-          <p className="max-w-sm text-lg sm:text-xl font-light opacity-70 self-end">
-            <TextReveal triggerOnScroll={true} delay={0.3}>
-              Featured projects meticulously crafted with passion to deliver
-              impactful digital experiences and drive results.
-            </TextReveal>
-          </p>
         </div>
         <WorkList />
       </div>
