@@ -19,6 +19,12 @@ const worksData = [
     link: "https://www.behance.net/gallery/230711991/Glance-Glow-Optical-Shop-Website",
     image: "2.webp",
   },
+  {
+    id: "4",
+    name: "Wallaxy Studio – Creative Agency Website",
+    link: "https://wallaxy-studio.vercel.app",
+    image: "4.jpg",
+  },
 ];
 
 export default function WorkList() {
