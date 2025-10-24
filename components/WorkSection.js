@@ -3,7 +3,7 @@ import WorkList from "./WorkList";
 
 export default function WorkSection() {
   return (
-    <section className="work-section bg-black text-white p-4 sm:p-8 md:p-12 lg:p-16">
+    <section className="work-section bg-black text-white p-4 sm:p-8 md:p-12 lg:py-16">
       <div className="text min-h-[40vh] mt-20" id="about">
         <p className="text-xl sm:text-2xl font-light max-w-3xl mx-auto">
           <TextReveal triggerOnScroll={true}>
@@ -16,7 +16,7 @@ export default function WorkSection() {
       </div>
       <div className="work" id="work">
         <div className="work-header flex flex-col gap-16">
-          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold lg:mx-10">
             <TextReveal triggerOnScroll={true}>Selected Works /</TextReveal>
           </h2>
         </div>

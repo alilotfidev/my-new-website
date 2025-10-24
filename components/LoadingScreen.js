@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-const LoadingScreen = ({ duration = 3.5 }) => {
+const LoadingScreen = ({ duration = 0.5 }) => {
   const counterRef = useRef(null);
   const loaderRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
