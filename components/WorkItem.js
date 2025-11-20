@@ -174,7 +174,7 @@ export default function WorkItem({ work }) {
               />
             </span>
 
-            <div className="line w-full h-[1px] bg-white absolute bottom-0 left-0 z-10"></div>
+            <div className="line w-full h-[1px] bg-white last:bg-black absolute bottom-0 left-0 z-10"></div>
           </div>
         </Link>
       </div>

@@ -3,7 +3,7 @@ import WorkList from "./WorkList";
 
 export default function WorkSection() {
   return (
-    <section className="work-section bg-black text-white p-4 sm:p-8 md:p-12 lg:py-16">
+    <section className="work-section bg-black text-white pt-4 sm:pt-8 md:pt-12 lg:pt-16">
       <div className="text min-h-[40vh] mt-20" id="about">
         <p className="text-xl sm:text-2xl font-light max-w-3xl mx-auto">
           <TextReveal triggerOnScroll={true}>
