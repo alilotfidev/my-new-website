@@ -37,6 +37,14 @@ const worksData = [
     image: "4.jpg",
     year: "2024",
   },
+  {
+    id: "5",
+    name: "Layrid",
+    type: "Showcase",
+    link: "https://layrid.vercel.app",
+    image: "5.webp",
+    year: "2025",
+  },
 ];
 
 export default function WorkList() {
